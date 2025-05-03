@@ -1,0 +1,267 @@
+/* Animation Styles */
+
+/* Glitch Text Effect */
+.glitch-text {
+    position: relative;
+    color: var(--white);
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--neon);
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-1 5s infinite linear alternate-reverse;
+  }
+  
+  .glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--orange);
+    clip: rect(24px, 450px, 100px, 0);
+    animation: glitch-anim-2 5s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-anim-1 {
+    0% {
+      clip: rect(26px, 9999px, 29px, 0);
+    }
+    10% {
+      clip: rect(47px, 9999px, 55px, 0);
+    }
+    20% {
+      clip: rect(6px, 9999px, 78px, 0);
+    }
+    30% {
+      clip: rect(95px, 9999px, 59px, 0);
+    }
+    40% {
+      clip: rect(31px, 9999px, 40px, 0);
+    }
+    50% {
+      clip: rect(54px, 9999px, 61px, 0);
+    }
+    60% {
+      clip: rect(89px, 9999px, 33px, 0);
+    }
+    70% {
+      clip: rect(68px, 9999px, 74px, 0);
+    }
+    80% {
+      clip: rect(10px, 9999px, 55px, 0);
+    }
+    90% {
+      clip: rect(10px, 9999px, 98px, 0);
+    }
+    100% {
+      clip: rect(34px, 9999px, 64px, 0);
+    }
+  }
+  
+  @keyframes glitch-anim-2 {
+    0% {
+      clip: rect(90px, 9999px, 74px, 0);
+    }
+    10% {
+      clip: rect(50px, 9999px, 89px, 0);
+    }
+    20% {
+      clip: rect(21px, 9999px, 97px, 0);
+    }
+    30% {
+      clip: rect(30px, 9999px, 14px, 0);
+    }
+    40% {
+      clip: rect(20px, 9999px, 97px, 0);
+    }
+    50% {
+      clip: rect(68px, 9999px, 55px, 0);
+    }
+    60% {
+      clip: rect(53px, 9999px, 38px, 0);
+    }
+    70% {
+      clip: rect(71px, 9999px, 10px, 0);
+    }
+    80% {
+      clip: rect(41px, 9999px, 82px, 0);
+    }
+    90% {
+      clip: rect(89px, 9999px, 41px, 0);
+    }
+    100% {
+      clip: rect(96px, 9999px, 52px, 0);
+    }
+  }
+  
+  /* Text Highlight */
+  .highlight-text {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlight-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 95, 31, 0.3);
+    bottom: 5px;
+    left: 0;
+    z-index: -1;
+  }
+  
+  /* Button Hover Effect */
+  .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+    z-index: -1;
+  }
+  
+  .btn:hover:before {
+    left: 100%;
+  }
+  
+  /* Service Card Hover */
+  @keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(57, 255, 20, 0.3);
+    }
+  }
+  
+  .service-card:hover .service-icon,
+  .tool-card:hover .tool-icon {
+    animation: neonGlow 2s infinite;
+    color: var(--neon);
+  }
+  
+  /* Project Card Hover */
+  .project-card::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid var(--orange);
+    border-left: 2px solid var(--orange);
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  
+  .project-card::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid var(--orange);
+    border-right: 2px solid var(--orange);
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  
+  .project-card:hover::after,
+  .project-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* Hover Effect for Skill Tags */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .skill-tag:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  /* Scroll Animation for Headers */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section-header {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Stats Counter Animation */
+  @keyframes countUp {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .stat-value {
+    animation: countUp 0.5s ease-out forwards;
+  }
+  
+  /* Logo Animation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .logo::after {
+    animation: rotate 10s linear infinite;
+  }
+  
+  /* Menu Toggle Animation */
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
