@@ -225,4 +225,376 @@
     .footer-content{flex-direction:column;text-align:center;}
     .social-links{margin-top:20px;}
   }
+
+
+
+
+
+/* Tablets (768px - 991px) - refine existing breakpoint */
+@media (max-width: 991px) and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
   
+  .hero-content h1 {
+    font-size: 3.8rem;
+  }
+  
+  .hero-inner {
+    gap: 3rem;
+  }
+  
+  .image-container {
+    max-width: 320px;
+  }
+  
+  /* Improve project card sizing */
+  .project-card {
+    min-width: 280px;
+    max-width: 340px;
+  }
+  
+  /* Adjust project image height */
+  .project-img {
+    height: 220px;
+  }
+  
+  /* Adjust tools layout */
+  .tool-card {
+    min-width: 160px;
+    max-width: 220px;
+  }
+  
+  /* Adjust service cards to fit better */
+  .service-card {
+    min-width: 200px;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+    max-width: 540px;
+  }
+  
+  /* Navigation menu adjustments */
+  .nav-links {
+    top: 78px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px 0;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+  
+  /* Stack hero elements */
+  .hero-inner {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-top: 60px;
+  }
+  
+  .hero-content, .image-container {
+    flex: unset;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    justify-content: center;
+  }
+  
+  .image-container {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Adjust sections padding */
+  .services-section,
+  .skills-section,
+  .projects-section,
+  .experience-section,
+  .tools-section,
+  .contact-section {
+    padding: 70px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  /* Improve project card layout */
+  .projects-container {
+    gap: 30px;
+  }
+  
+  .project-card {
+    min-width: 100%;
+  }
+  
+  .project-img {
+    height: 240px;
+  }
+  
+  /* Adjust tools layout */
+  .tools-container {
+    gap: 20px;
+  }
+  
+  .tool-card {
+    min-width: 45%;
+    max-width: 45%;
+    padding: 25px 15px;
+  }
+  
+  /* Adjust experience cards */
+  .experience-card {
+    padding: 25px 20px;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .experience-date {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .social-links {
+    margin-top: 15px;
+    justify-content: center;
+  }
+}
+
+/* Mobile Portrait (375px - 575px) - enhanced small screen support */
+@media (max-width: 575px) {
+  .container {
+    width: 92%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle p {
+    font-size: 1rem;
+  }
+  
+  .hero-cta h2 {
+    font-size: 1.5rem;
+  }
+  
+  .image-container {
+    max-width: 220px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Stats cards full width */
+  .stats-container {
+    gap: 20px;
+  }
+  
+  .stat-card {
+    min-width: 100%;
+    padding: 20px 15px;
+  }
+  
+  .stat-value {
+    font-size: 2.5rem;
+  }
+  
+  /* Services cards adjustments */
+  .service-card {
+    min-width: 100%;
+    padding: 30px 20px;
+  }
+  
+  /* Skills tags adjustments */
+  .skill-tag {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* Tool cards full width */
+  .tool-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Project info padding */
+  .project-info {
+    padding: 20px 15px;
+  }
+  
+  /* Contact form adjustments */
+  .form-group input, 
+  .form-group textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra Small Devices (Below 375px) */
+@media (max-width: 374px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 100px 0 60px;
+  }
+  
+  .image-container {
+    max-width: 180px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE TOUCH OPTIMIZATIONS
+   ========================================================= */
+
+/* Optimize for touch devices */
+@media (hover: none) {
+  .cursor-dot, 
+  .cursor-outline {
+    display: none;
+  }
+  
+  /* Enhance touch targets */
+  .nav-link,
+  .btn,
+  .social-link {
+    padding: 12px 24px;
+  }
+  
+  .social-link {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .project-card:hover,
+  .service-card:hover,
+  .tool-card:hover,
+  .experience-card:hover {
+    transform: none;
+  }
+  
+  /* Ensure forms are touch-friendly */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+    padding: 15px;
+  }
+}
+
+/* =========================================================
+   ORIENTATION SPECIFIC ADJUSTMENTS
+   ========================================================= */
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: auto;
+    min-height: 450px;
+    padding: 100px 0 50px;
+  }
+  
+  .hero-inner {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .image-container {
+    max-width: 200px;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+  }
+}
+
+/* =========================================================
+   PRINT MEDIA QUERY
+   ========================================================= */
+
+@media print {
+  .header,
+  .menu-toggle,
+  .noise-overlay,
+  .cursor-dot,
+  .cursor-outline,
+  #particles-js,
+  .social-links,
+  .contact-section {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .hero-section,
+  .stats-section,
+  .services-section,
+  .skills-section,
+  .projects-section,
+  .experience-section,
+  .tools-section {
+    padding: 20px 0;
+    background: white !important;
+  }
+  
+  /* Adjust colors for print */
+  .hero-content h1,
+  .section-header h2,
+  .experience-card h3,
+  .project-info h3,
+  .tool-card h3,
+  .service-card h3 {
+    color: black;
+  }
+}
